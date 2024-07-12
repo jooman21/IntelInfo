@@ -1,0 +1,11 @@
+package com.custom.eaii.training; // Replace with your package name
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class main {
+    public static void main(String[] args) {
+        SpringApplication.run(main.class, args);
+    }
+}

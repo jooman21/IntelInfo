@@ -1,0 +1,31 @@
+
+
+group = 'com.custom.eaii.training'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // pointing to the domain application since it is the gate way to our aggregate root
+    implementation project(":informant-Domain-application")
+
+    implementation project(":common-application")
+    //implementation libs.spring-boot-starter
+    implementation libs.orgSpringframeworkBootSpringBootStarterWeb
+    implementation libs.orgSpringframeworkBootSpringBootStarterMail
+    implementation libs.orgSpringframeworkSecuritySpringSecurityConfig
+    implementation libs.orgSpringframeworkSecuritySpringSecurityWeb
+
+
+
+
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}

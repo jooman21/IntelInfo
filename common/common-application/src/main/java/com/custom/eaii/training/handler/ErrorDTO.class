@@ -1,0 +1,108 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package com.custom.eaii.training.handler;
+
+public class ErrorDTO {
+    private final String code;
+    private final String message;
+
+    public static ErrorDTOBuilder builder() {
+        return new ErrorDTOBuilder();
+    }
+
+    public String getCode() {
+        return this.code;
+    }
+
+    public String getMessage() {
+        return this.message;
+    }
+
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        } else if (!(o instanceof ErrorDTO)) {
+            return false;
+        } else {
+            ErrorDTO other = (ErrorDTO)o;
+            if (!other.canEqual(this)) {
+                return false;
+            } else {
+                Object this$code = this.getCode();
+                Object other$code = other.getCode();
+                if (this$code == null) {
+                    if (other$code != null) {
+                        return false;
+                    }
+                } else if (!this$code.equals(other$code)) {
+                    return false;
+                }
+
+                Object this$message = this.getMessage();
+                Object other$message = other.getMessage();
+                if (this$message == null) {
+                    if (other$message != null) {
+                        return false;
+                    }
+                } else if (!this$message.equals(other$message)) {
+                    return false;
+                }
+
+                return true;
+            }
+        }
+    }
+
+    protected boolean canEqual(Object other) {
+        return other instanceof ErrorDTO;
+    }
+
+    public int hashCode() {
+        boolean PRIME = true;
+        int result = 1;
+        Object $code = this.getCode();
+        result = result * 59 + ($code == null ? 43 : $code.hashCode());
+        Object $message = this.getMessage();
+        result = result * 59 + ($message == null ? 43 : $message.hashCode());
+        return result;
+    }
+
+    public String toString() {
+        String var10000 = this.getCode();
+        return "ErrorDTO(code=" + var10000 + ", message=" + this.getMessage() + ")";
+    }
+
+    public ErrorDTO(String code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
+    public static class ErrorDTOBuilder {
+        private String code;
+        private String message;
+
+        ErrorDTOBuilder() {
+        }
+
+        public ErrorDTOBuilder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        public ErrorDTOBuilder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        public ErrorDTO build() {
+            return new ErrorDTO(this.code, this.message);
+        }
+
+        public String toString() {
+            return "ErrorDTO.ErrorDTOBuilder(code=" + this.code + ", message=" + this.message + ")";
+        }
+    }
+}

@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+  id 'io.spring.dependency-management'
+}
+
+group = 'com.custom.eaii.training'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+//apply from: "$rootProject.projectDir/dependency.gradle"
+dependencies {
+
+  implementation project(":informant-Domain-application")
+  implementation project(":informant-Domain-core")
+    implementation libs.orgSpringframeworkBootSpringBootStarterDataJpa
+    annotationProcessor libs.orgProjectLombok
+    compileOnly libs.orgProjectLombok
+    //MapStruct dependency must be added after lombok
+    implementation libs['mapstruct']
+    annotationProcessor libs['mapstruct-processor']
+
+    implementation project(':common-data')
+    implementation project(':common-domain')
+}
+
+test {
+    useJUnitPlatform()
+}

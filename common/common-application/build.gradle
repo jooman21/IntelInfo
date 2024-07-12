@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.custom.eaii.training'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    implementation libs.orgSpringframeworkSecuritySpringSecurityConfig
+    implementation libs.orgSpringframeworkBootSpringBootStarterWeb
+    implementation libs.orgSpringframeworkBootSpringBootStarterMail
+    implementation libs.orgSpringframeworkBootSpringBootStarter
+    annotationProcessor libs.orgProjectLombok
+    compileOnly libs.orgProjectLombok
+    implementation 'org.springframework.boot:spring-boot-starter-validation:3.2.2'
+    implementation 'org.testng:testng:7.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+
+
+    implementation project(":informant-Domain-application")
+    implementation project(":informant-Domain-core")
+
+}
+
+test {
+    useJUnitPlatform()
+    /*implementation libs['mapstruct']
+    annotationProcessor libs['mapstruct-processor']
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'*/
+}

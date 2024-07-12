@@ -1,0 +1,275 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package com.custom.eaii.training.config;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ConfigurationProperties(
+    prefix = "lookup-api"
+)
+public class LookUpServiceConfigData {
+    private String url;
+    private String findAddress;
+    private String findContact;
+    private String findTraineeOrganization;
+    private String findRegion;
+    private String findPassPoint;
+    private String findWarehousePenalty;
+    private String findCCAPenalty;
+    private String findPenalty;
+    private String findCertificate;
+
+    public LookUpServiceConfigData() {
+    }
+
+    public String getUrl() {
+        return this.url;
+    }
+
+    public String getFindAddress() {
+        return this.findAddress;
+    }
+
+    public String getFindContact() {
+        return this.findContact;
+    }
+
+    public String getFindTraineeOrganization() {
+        return this.findTraineeOrganization;
+    }
+
+    public String getFindRegion() {
+        return this.findRegion;
+    }
+
+    public String getFindPassPoint() {
+        return this.findPassPoint;
+    }
+
+    public String getFindWarehousePenalty() {
+        return this.findWarehousePenalty;
+    }
+
+    public String getFindCCAPenalty() {
+        return this.findCCAPenalty;
+    }
+
+    public String getFindPenalty() {
+        return this.findPenalty;
+    }
+
+    public String getFindCertificate() {
+        return this.findCertificate;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public void setFindAddress(String findAddress) {
+        this.findAddress = findAddress;
+    }
+
+    public void setFindContact(String findContact) {
+        this.findContact = findContact;
+    }
+
+    public void setFindTraineeOrganization(String findTraineeOrganization) {
+        this.findTraineeOrganization = findTraineeOrganization;
+    }
+
+    public void setFindRegion(String findRegion) {
+        this.findRegion = findRegion;
+    }
+
+    public void setFindPassPoint(String findPassPoint) {
+        this.findPassPoint = findPassPoint;
+    }
+
+    public void setFindWarehousePenalty(String findWarehousePenalty) {
+        this.findWarehousePenalty = findWarehousePenalty;
+    }
+
+    public void setFindCCAPenalty(String findCCAPenalty) {
+        this.findCCAPenalty = findCCAPenalty;
+    }
+
+    public void setFindPenalty(String findPenalty) {
+        this.findPenalty = findPenalty;
+    }
+
+    public void setFindCertificate(String findCertificate) {
+        this.findCertificate = findCertificate;
+    }
+
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        } else if (!(o instanceof LookUpServiceConfigData)) {
+            return false;
+        } else {
+            LookUpServiceConfigData other = (LookUpServiceConfigData)o;
+            if (!other.canEqual(this)) {
+                return false;
+            } else {
+                Object this$url = this.getUrl();
+                Object other$url = other.getUrl();
+                if (this$url == null) {
+                    if (other$url != null) {
+                        return false;
+                    }
+                } else if (!this$url.equals(other$url)) {
+                    return false;
+                }
+
+                Object this$findAddress = this.getFindAddress();
+                Object other$findAddress = other.getFindAddress();
+                if (this$findAddress == null) {
+                    if (other$findAddress != null) {
+                        return false;
+                    }
+                } else if (!this$findAddress.equals(other$findAddress)) {
+                    return false;
+                }
+
+                Object this$findContact = this.getFindContact();
+                Object other$findContact = other.getFindContact();
+                if (this$findContact == null) {
+                    if (other$findContact != null) {
+                        return false;
+                    }
+                } else if (!this$findContact.equals(other$findContact)) {
+                    return false;
+                }
+
+                label110: {
+                    Object this$findTraineeOrganization = this.getFindTraineeOrganization();
+                    Object other$findTraineeOrganization = other.getFindTraineeOrganization();
+                    if (this$findTraineeOrganization == null) {
+                        if (other$findTraineeOrganization == null) {
+                            break label110;
+                        }
+                    } else if (this$findTraineeOrganization.equals(other$findTraineeOrganization)) {
+                        break label110;
+                    }
+
+                    return false;
+                }
+
+                label103: {
+                    Object this$findRegion = this.getFindRegion();
+                    Object other$findRegion = other.getFindRegion();
+                    if (this$findRegion == null) {
+                        if (other$findRegion == null) {
+                            break label103;
+                        }
+                    } else if (this$findRegion.equals(other$findRegion)) {
+                        break label103;
+                    }
+
+                    return false;
+                }
+
+                Object this$findPassPoint = this.getFindPassPoint();
+                Object other$findPassPoint = other.getFindPassPoint();
+                if (this$findPassPoint == null) {
+                    if (other$findPassPoint != null) {
+                        return false;
+                    }
+                } else if (!this$findPassPoint.equals(other$findPassPoint)) {
+                    return false;
+                }
+
+                label89: {
+                    Object this$findWarehousePenalty = this.getFindWarehousePenalty();
+                    Object other$findWarehousePenalty = other.getFindWarehousePenalty();
+                    if (this$findWarehousePenalty == null) {
+                        if (other$findWarehousePenalty == null) {
+                            break label89;
+                        }
+                    } else if (this$findWarehousePenalty.equals(other$findWarehousePenalty)) {
+                        break label89;
+                    }
+
+                    return false;
+                }
+
+                label82: {
+                    Object this$findCCAPenalty = this.getFindCCAPenalty();
+                    Object other$findCCAPenalty = other.getFindCCAPenalty();
+                    if (this$findCCAPenalty == null) {
+                        if (other$findCCAPenalty == null) {
+                            break label82;
+                        }
+                    } else if (this$findCCAPenalty.equals(other$findCCAPenalty)) {
+                        break label82;
+                    }
+
+                    return false;
+                }
+
+                Object this$findPenalty = this.getFindPenalty();
+                Object other$findPenalty = other.getFindPenalty();
+                if (this$findPenalty == null) {
+                    if (other$findPenalty != null) {
+                        return false;
+                    }
+                } else if (!this$findPenalty.equals(other$findPenalty)) {
+                    return false;
+                }
+
+                Object this$findCertificate = this.getFindCertificate();
+                Object other$findCertificate = other.getFindCertificate();
+                if (this$findCertificate == null) {
+                    if (other$findCertificate != null) {
+                        return false;
+                    }
+                } else if (!this$findCertificate.equals(other$findCertificate)) {
+                    return false;
+                }
+
+                return true;
+            }
+        }
+    }
+
+    protected boolean canEqual(Object other) {
+        return other instanceof LookUpServiceConfigData;
+    }
+
+    public int hashCode() {
+        boolean PRIME = true;
+        int result = 1;
+        Object $url = this.getUrl();
+        result = result * 59 + ($url == null ? 43 : $url.hashCode());
+        Object $findAddress = this.getFindAddress();
+        result = result * 59 + ($findAddress == null ? 43 : $findAddress.hashCode());
+        Object $findContact = this.getFindContact();
+        result = result * 59 + ($findContact == null ? 43 : $findContact.hashCode());
+        Object $findTraineeOrganization = this.getFindTraineeOrganization();
+        result = result * 59 + ($findTraineeOrganization == null ? 43 : $findTraineeOrganization.hashCode());
+        Object $findRegion = this.getFindRegion();
+        result = result * 59 + ($findRegion == null ? 43 : $findRegion.hashCode());
+        Object $findPassPoint = this.getFindPassPoint();
+        result = result * 59 + ($findPassPoint == null ? 43 : $findPassPoint.hashCode());
+        Object $findWarehousePenalty = this.getFindWarehousePenalty();
+        result = result * 59 + ($findWarehousePenalty == null ? 43 : $findWarehousePenalty.hashCode());
+        Object $findCCAPenalty = this.getFindCCAPenalty();
+        result = result * 59 + ($findCCAPenalty == null ? 43 : $findCCAPenalty.hashCode());
+        Object $findPenalty = this.getFindPenalty();
+        result = result * 59 + ($findPenalty == null ? 43 : $findPenalty.hashCode());
+        Object $findCertificate = this.getFindCertificate();
+        result = result * 59 + ($findCertificate == null ? 43 : $findCertificate.hashCode());
+        return result;
+    }
+
+    public String toString() {
+        String var10000 = this.getUrl();
+        return "LookUpServiceConfigData(url=" + var10000 + ", findAddress=" + this.getFindAddress() + ", findContact=" + this.getFindContact() + ", findTraineeOrganization=" + this.getFindTraineeOrganization() + ", findRegion=" + this.getFindRegion() + ", findPassPoint=" + this.getFindPassPoint() + ", findWarehousePenalty=" + this.getFindWarehousePenalty() + ", findCCAPenalty=" + this.getFindCCAPenalty() + ", findPenalty=" + this.getFindPenalty() + ", findCertificate=" + this.getFindCertificate() + ")";
+    }
+}

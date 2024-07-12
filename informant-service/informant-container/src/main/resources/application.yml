@@ -1,0 +1,41 @@
+server:
+  port: 8082
+
+  logging:
+    level:
+       root: WARN
+       org.springframework.web: WARN
+       com.custom.eaii.training: DEBUG
+       org.hibernate: WARN
+  ssl:
+      enabled: false
+cms:
+  service-name: informant-service
+informant-service:
+  env: local
+
+spring:
+  application:
+    name: custom-informant-service-${informant-service.env}
+  jpa:
+    open-in-view: true
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url:  ${SPRING_DATASOURCE_URL}
+    username: postgres
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      schema: custom_informant_local
+  flyway:
+    url: ${SPRING_FLYWAY_URL}
+    user: postgres
+    password: ${SPRING_FLYWAY_PASSWORD}
+    schemas: custom_informant_local
+    locations:
+      - classpath:db/migration/structure
+      - classpath:db/migration/seed

@@ -1,0 +1,59 @@
+rootProject.name = 'intelligenceInformation'
+
+
+//include ":intel info"
+
+//include 'informant-service:'
+//findProject(':informant-service:informant-data')?.name = 'informant-data'
+
+
+
+include ':informant-Domain-core'
+project(':informant-Domain-core').projectDir = file('informant-service/informant-Domain/informant-Domain-core')
+
+include 'informant-Domain-application'
+project(':informant-Domain-application').projectDir = file('informant-service/informant-Domain/informant-Domain-application')
+
+
+include ':informant-data'
+project(':informant-data').projectDir = file('informant-service/informant-data')
+
+
+include ':informant-container'
+project(':informant-container').projectDir = file('informant-service/informant-container')
+
+
+include ':informant-application'
+project(':informant-application').projectDir = file('informant-service/informant-application')
+
+
+include ':common-domain'
+project(':common-domain').projectDir = file('common/common-domain')
+
+
+// settings.gradle
+include ':common-data'
+project(':common-data').projectDir = file('common/common-data')
+include 'common-application'
+project(':common-application').projectDir = file('common/common-application')
+
+
+include ':user-profile-domain-core'
+project(':user-profile-domain-core').projectDir = file('user-profile-service/user-profile-domain/user-profile-domain-core')
+
+include ':user-profile-domain-application'
+project(':user-profile-domain-application').projectDir = file('user-profile-service/user-profile-domain/user-profile-domain-application')
+
+include ':user-profile-data'
+project(':user-profile-data').projectDir = file('user-profile-service/user-profile-data')
+
+
+
+
+include ':user-profile-application'
+project(':user-profile-application').projectDir = file('user-profile-service/user-profile-application')
+
+include ':user-profile-container'
+project(':user-profile-container').projectDir = file ('user-profile-service/user-profile-container')
+
+

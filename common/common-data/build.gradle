@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.custom.eaii.training'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(":informant-Domain-application")
+    implementation project(":informant-Domain-core")
+    implementation libs.orgSpringframeworkBootSpringBootStarterDataJpa
+    implementation libs.orgSpringframeworkSecuritySpringSecurityConfig
+    //implementation libs.springSecurity
+     annotationProcessor libs.orgProjectLombok
+
+    //MapStruct dependency must be added after lombok
+    implementation libs['mapstruct']
+    annotationProcessor libs['mapstruct-processor']
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}

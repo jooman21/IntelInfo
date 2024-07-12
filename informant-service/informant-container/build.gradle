@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.custom.eaii.training'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation project(":informant-application")
+    implementation project(":informant-Domain-core")
+    implementation project(":informant-Domain-application")
+    implementation project(":informant-data")
+    implementation libs.orgSpringframeworkBootSpringBootStarter
+    implementation libs.orgSpringframeworkBootSpringBootStarterWeb
+    implementation libs.orgSpringframeworkSecuritySpringSecurityWeb
+    implementation libs.orgSpringframeworkSecuritySpringSecurityConfig
+
+    implementation libs.h2Database
+//    implementation    libs.orgHibernate
+    runtimeOnly libs.orgFlyWayDb
+    runtimeOnly libs.orgPostgresql
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
